@@ -1,5 +1,36 @@
+/* goole font link starts hear  */
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Manrope:wght@400;500;600;800&display=swap");
+/* goole font link Ends hear  */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+.home-section-wraper {
+  padding-top: 85px;
+  height: 526px;
+}
+
+.hoem-player {
+  margin-top: 125px;
+}
+.futboll {
+  right: -5%;
+  bottom: -247px;
+}
+.hoem-player-logo {
+  top: 9%;
+  right: 7%;
+}
+.home-content-three {
+  width: 411px;
+}
+.futboll-lear {
+  right: 4px;
+  bottom: -221px;
+}
+.hoe-heading {
+  font-family: "Berkshire Swash", cursive;
 }
