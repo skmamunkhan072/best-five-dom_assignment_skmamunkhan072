@@ -34,3 +34,9 @@
 .hoe-heading {
   font-family: "Berkshire Swash", cursive;
 }
+.players-card-wreper {
+  box-shadow: 0px 0px 3px 0px #fff;
+}
+.player-img-wreap img {
+  width: 100%;
+}
