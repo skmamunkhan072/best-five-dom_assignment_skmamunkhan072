@@ -1,9 +1,9 @@
+// select players name and display players name js
+
 const playerCardbutton = document.querySelectorAll(
   ".players-card-wreper .select-btn"
 );
-const selectListParentElement = document.getElementById("select-players-name");
-let listGetLength = selectListParentElement.children.length;
-let listLength = listGetLength;
+let listLength = listItemsLength(selectListParentElement);
 for (const items of playerCardbutton) {
   items.addEventListener("click", function (event) {
     const tarGetParentElement = event.target.parentElement;
@@ -15,7 +15,6 @@ for (const items of playerCardbutton) {
               </li>`;
       const selectButton = event.target;
       selectButton.setAttribute("disabled", true);
-      console.log(selectButton);
       worning.style.display = "none";
     } else {
       worning.style.display = "block";

@@ -250,7 +250,7 @@
 
                   </ul>
                 </div>
-                <div id="text-worning" class="worning text-red-600 text-center mt-5">
+                <div id="text-worning" class="worning text-xs text-red-600 text-center mt-5">
                   <h1>You cannot select more than 5 people</h1>
                 </div>
                 <!-- players name list Ends hear  -->
@@ -270,9 +270,7 @@
               <div
                 class="per-players-fild-wreper fex text-white flex justify-between items-center text-slate-300"
               >
-                <label for="per-player" class="text-base mr-5"
-                  >Per Player</label
-                >
+                <label for="per-player" class="text-base mr-5">Per Player</label>
                 <input
                   id="per-player"
                   class="bg-black border-2 border-slate-500 w-6/12 h-10"
@@ -284,15 +282,19 @@
               <!-- calculate button starts hear  -->
               <div class="calculate-btn-wraper text-center my-5">
                 <button
-                  class="py-2 pl-20 pr-20 hover:bg-sky-700 bg-slate-300 rounded-md"
+                id="budget-player"
+                  class="py-2 pl-20 pr-20 hover:bg-sky-700 bg-sky-600 rounded-md text-white"
                 >
                   Calculate
                 </button>
+                <div id="per-player-worning" class="worning text-xs text-red-600 text-center mt-5">
+                  <h1>Pless Enter Your per player fild value</h1>
+                </div>
               </div>
               <!-- calculate button Ends hear  -->
               <div class="total-value-wreper flex justify-between text-white">
                 <h4>Player Expenses</h4>
-                <h4>$<span>5000</span></h4>
+                <h4>$<span id="player-budget-total">000</span></h4>
               </div>
 
               <!-- per player fild Ends hear  -->
@@ -303,11 +305,12 @@
               >
                 <label for="per-player" class="text-base mr-5">Manager</label>
                 <input
-                  id="per-player"
+                  id="manager-fild"
                   class="bg-black border-2 border-slate-500 w-6/12 h-10"
                   type="text"
                 />
               </div>
+
               <!-- per Manager fild Ends hear  -->
 
               <!-- per Coach fild starts hear  -->
@@ -316,17 +319,20 @@
               >
                 <label for="per-player" class="text-base mr-5">Coach</label>
                 <input
-                  id="per-player"
+                  id="coachr-fild"
                   class="bg-black border-2 border-slate-500 w-6/12 h-10"
                   type="text"
                 />
+              </div>
+              <div id="coach-fild-worning" class="worning text-xs text-red-600 text-center mt-5">
+                <h1>Pless Enter Your Coach and Manager fild value</h1>
               </div>
               <!-- per Coach fild Ends hear  -->
 
               <!-- calculate button starts hear  -->
               <div class="calculate-btn-wraper text-center my-5">
-                <button
-                  class="py-2 pl-20 pr-20 hover:bg-sky-700 bg-slate-300 rounded-md"
+                <button id="total-btn"
+                  class="py-2 pl-20 pr-20 hover:bg-sky-700 bg-sky-800 rounded-md text-white"
                 >
                   Calculate
                 </button>
@@ -335,9 +341,8 @@
 
               <div class="total-value-wreper flex justify-between text-white">
                 <h4>Total</h4>
-                <h4 class="text-orange-700">$ <span>10000</span></h4>
+                <h4 class="text-orange-700">$ <span id="all-sum-total">10000</span></h4>
               </div>
-
               <!-- playears card Ends hear  -->
             </div>
             -->
