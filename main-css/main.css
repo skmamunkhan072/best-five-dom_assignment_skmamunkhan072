@@ -8,23 +8,24 @@
   box-sizing: border-box;
   font-family: "Manrope", sans-serif;
 }
-.home-section-wraper {
+.hero-section-wraper {
   padding-top: 85px;
   height: 526px;
+  overflow: hidden;
 }
 
-.hoem-player {
+.hero-player {
   margin-top: 125px;
 }
 .futboll {
   right: -5%;
   bottom: -247px;
 }
-.hoem-player-logo {
+.hero-player-logo {
   top: 9%;
   right: 7%;
 }
-.home-content-three {
+.hero-content-three {
   width: 411px;
 }
 .futboll-lear {
@@ -39,4 +40,18 @@
 }
 .player-img-wreap img {
   width: 100%;
+}
+.select-btn:disabled {
+  background: #a2a9af;
+}
+.calculate-btn-wraper button {
+  display: block;
+  width: 100%;
+  max-width: ;
+}
+
+@media screen and (max-width: 992) {
+  .grid-cols-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
