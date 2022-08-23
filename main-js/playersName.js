@@ -14,11 +14,14 @@ for (const items of playerCardbutton) {
                 <span class="font-extrabold mr-5">${(listLength += 1)}.</span> ${tarGetPlayersName}
               </li>`;
       const selectButton = event.target;
-      selectButton.setAttribute("disabled", true);
+      selectButton.setAttribute("disabled", false);
       worning.style.display = "none";
     } else {
-      worning.style.display = "block";
-      selectButton.removeAttribute("disabled", false);
+      if (listLength === 5) {
+        worning.style.display = "block";
+      } else {
+        selectButton.removeAttribute("disabled", true);
+      }
     }
   });
 }

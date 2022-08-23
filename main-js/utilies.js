@@ -29,9 +29,13 @@ function sumInputFildValue(event, value) {
   return getEleentValue;
 }
 
-function getInputFildValue(IdName) {
+function getInputFildValue(IdName, numberWorning) {
   const inputFildPreviesValue = document.getElementById(IdName).value;
-  const inputFildValue = parseFloat(inputFildPreviesValue);
-  inputFildPreviesValue.value = "";
-  return inputFildValue;
+  if (isNaN(inputFildPreviesValue)) {
+    return;
+  } else {
+    const inputFildValue = parseFloat(inputFildPreviesValue);
+    inputFildPreviesValue.value = "";
+    return inputFildValue;
+  }
 }

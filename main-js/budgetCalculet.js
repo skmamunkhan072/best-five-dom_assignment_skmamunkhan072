@@ -28,23 +28,38 @@ document.getElementById("total-btn").addEventListener("click", function () {
   const playersTotalPreviesString = document.getElementById(
     "player-budget-total"
   ).innerText;
-  const playersTotalPrevies = parseFloat(playersTotalPreviesString);
-  const managerFildValue = getInputFildValue("manager-fild");
-  const coachrFildValue = getInputFildValue("coachr-fild");
-
   const getManagerFild = document.getElementById("manager-fild");
   const getCoachrrFild = document.getElementById("coachr-fild");
   const inputFildWorning = document.getElementById("coach-fild-worning");
+  const inputNumberWorning = document.getElementById(
+    "input-fild-worning-number"
+  );
 
-  if (isNaN(managerFildValue)) {
-    inputFildWorning.style.display = "block";
-    getManagerFild.value = "";
-    getCoachrrFild.value = "";
+  const playersTotalPrevies = parseFloat(playersTotalPreviesString);
+  const managerFildValue = getInputFildValue(
+    "manager-fild",
+    inputNumberWorning
+  );
+  const coachrFildValue = getInputFildValue("coachr-fild", inputNumberWorning);
+
+  if (
+    typeof managerFildValue !== "undefined" &&
+    typeof coachrFildValue !== "undefined"
+  ) {
+    inputNumberWorning.style.display = "none";
+    if (isNaN(managerFildValue)) {
+      inputFildWorning.style.display = "block";
+      getManagerFild.value = "";
+      getCoachrrFild.value = "";
+    } else {
+      inputFildWorning.style.display = "none";
+      const sumTotal = playersTotalPrevies + managerFildValue + coachrFildValue;
+      sumInputFildValue("all-sum-total", sumTotal);
+      getManagerFild.value = "";
+      getCoachrrFild.value = "";
+    }
   } else {
     inputFildWorning.style.display = "none";
-    const sumTotal = playersTotalPrevies + managerFildValue + coachrFildValue;
-    sumInputFildValue("all-sum-total", sumTotal);
-    getManagerFild.value = "";
-    getCoachrrFild.value = "";
+    inputNumberWorning.style.display = "block";
   }
 });
