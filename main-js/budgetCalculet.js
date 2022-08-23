@@ -61,5 +61,7 @@ document.getElementById("total-btn").addEventListener("click", function () {
   } else {
     inputFildWorning.style.display = "none";
     inputNumberWorning.style.display = "block";
+    getManagerFild.value = "";
+    getCoachrrFild.value = "";
   }
 });
