@@ -29,16 +29,22 @@ document.getElementById("total-btn").addEventListener("click", function () {
     "player-budget-total"
   ).innerText;
   const playersTotalPrevies = parseFloat(playersTotalPreviesString);
-
   const managerFildValue = getInputFildValue("manager-fild");
   const coachrFildValue = getInputFildValue("coachr-fild");
+
+  const getManagerFild = document.getElementById("manager-fild");
+  const getCoachrrFild = document.getElementById("coachr-fild");
   const inputFildWorning = document.getElementById("coach-fild-worning");
-  if (isNaN(managerFildValue, coachrFildValue)) {
+
+  if (isNaN(managerFildValue)) {
     inputFildWorning.style.display = "block";
-    console.log("hello");
+    getManagerFild.value = "";
+    getCoachrrFild.value = "";
   } else {
     inputFildWorning.style.display = "none";
     const sumTotal = playersTotalPrevies + managerFildValue + coachrFildValue;
     sumInputFildValue("all-sum-total", sumTotal);
+    getManagerFild.value = "";
+    getCoachrrFild.value = "";
   }
 });

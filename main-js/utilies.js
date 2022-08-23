@@ -12,6 +12,7 @@ function getFilldValue(idName) {
     const playerTotal = document.getElementById("player-budget-total");
     const playerTotalValue = (playerTotal.innerText = 00);
     perPlayersFildWorning.style.display = "block";
+    getInputFild.value = "";
     return playerTotalValue;
   } else {
     const getValue = parseFloat(getInputFild.value);
@@ -31,5 +32,6 @@ function sumInputFildValue(event, value) {
 function getInputFildValue(IdName) {
   const inputFildPreviesValue = document.getElementById(IdName).value;
   const inputFildValue = parseFloat(inputFildPreviesValue);
+  inputFildPreviesValue.value = "";
   return inputFildValue;
 }
